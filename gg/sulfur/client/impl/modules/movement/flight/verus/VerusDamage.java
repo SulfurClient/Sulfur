@@ -1,4 +1,4 @@
-package gg.sulfur.client.impl.modules.movement.flight.blocksmc;
+package gg.sulfur.client.impl.modules.movement.flight.verus;
 
 import gg.sulfur.client.Sulfur;
 import gg.sulfur.client.api.property.impl.NumberValue;
@@ -25,7 +25,7 @@ import java.text.DecimalFormat;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 
-public class BloxMCTest extends FlightMode {
+public class VerusDamage extends FlightMode {
 
     private CopyOnWriteArrayList<Packet> savedPackets = new CopyOnWriteArrayList<Packet>();
     Stopwatch stopwatch = new Stopwatch();
@@ -40,8 +40,8 @@ public class BloxMCTest extends FlightMode {
     private boolean boosted = false;
     private boolean canBoost = false;
 
-    public BloxMCTest() {
-        super("TestFly832532df");
+    public VerusDamage() {
+        super("Verus Damage");
     }
 
     @Override
@@ -68,12 +68,10 @@ public class BloxMCTest extends FlightMode {
         if (mc.thePlayer.hurtTime >= 1 && canBoost) {
             if (!boosted) {
                 speedy = getFlight().getSpeed().getValue()/* * 4*/;
-                //mc.timer.timerSpeed = 2;
                 boosted = true;
             }
         } else {
-            //mc.timer.timerSpeed = 1.16F;
-            speedy = 0.33f;
+            speedy = 0.28f;
         }
     }
 

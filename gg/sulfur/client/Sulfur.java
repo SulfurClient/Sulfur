@@ -138,12 +138,10 @@ public class Sulfur {
         try {
             readName();
         } catch (Exception e) {
-            clientName = "Sulfur";
+            clientName = "Sulfur ";
             System.out.println("There was an error whilst reading the client name:");
             e.printStackTrace();
         }
-
-        doRPC(880353171795505182l);
 
         eventBus.register(this);
         Display.setTitle("Minecraft 1.8.8");
@@ -158,33 +156,33 @@ public class Sulfur {
         return volSlider;
     }
 
-    private void doRPC(long application) {
-        IPCClient client = new IPCClient(application);
-        System.out.println("Setting RPC");
-        client.setListener(new IPCListener() {
-
-            @Override
-            public void onReady(IPCClient client) {
-                RichPresence.Builder builder = new RichPresence.Builder();
-                builder.setState("Client User: " + user)
-                        .setDetails(buildType.getName() + " Build")
-                        .setStartTimestamp(OffsetDateTime.now())
-                        .setLargeImage("logo", "Build: " + getClientVersion())
-                        .setSmallImage("logo", "Destroying shitty servers")
-                        //.setParty("party1234", 1, 6)
-                        .setMatchSecret("xyzzy")
-                        //.setJoinSecret("join")
-                        .setSpectateSecret("look");
-
-                client.sendRichPresence(builder.build());
-            }
-        });
-        try {
-            client.connect();
-        } catch (Exception e) {
-
-        }
-    }
+//    private void doRPC(long application) {
+//        IPCClient client = new IPCClient(application);
+//        System.out.println("Setting RPC");
+//        client.setListener(new IPCListener() {
+//
+//            @Override
+//            public void onReady(IPCClient client) {
+//                RichPresence.Builder builder = new RichPresence.Builder();
+//                builder.setState("Client User: " + user)
+//                        .setDetails(buildType.getName() + " Build")
+//                        .setStartTimestamp(OffsetDateTime.now())
+//                        .setLargeImage("logo", "Build: " + getClientVersion())
+//                        .setSmallImage("logo", "Destroying shitty servers")
+//                        //.setParty("party1234", 1, 6)
+//                        .setMatchSecret("xyzzy")
+//                        //.setJoinSecret("join")
+//                        .setSpectateSecret("look");
+//
+//                client.sendRichPresence(builder.build());
+//            }
+//        });
+//        try {
+//            client.connect();
+//        } catch (Exception e) {
+//
+//        }
+//    }
 
     @Subscribe
     public void onKeyboardClick(KeyboardEvent event) {
