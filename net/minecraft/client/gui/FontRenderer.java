@@ -368,11 +368,11 @@ public class FontRenderer implements IResourceManagerReloadListener {
         this.resetStyles();
         int i;
 
-        for (Map.Entry mapElement : Start.getInstance().getSenseManager().getSenseUserMap().entrySet()) {
-            String key = (String) mapElement.getKey();
-            String value = (String) mapElement.getValue();
-            text = text.replaceAll(value, key + " §7(" + value + ")");
-        }
+//        for (Map.Entry mapElement : Start.getInstance().getSenseManager().getSenseUserMap().entrySet()) {
+//            String key = (String) mapElement.getKey();
+//            String value = (String) mapElement.getValue();
+//            text = text.replaceAll(value, key + " §7(" + value + ")");
+//        }
 
         if (dropShadow) {
             i = this.func_180455_b(text, x + 1.0F, y + 1.0F, color, true);

@@ -21,6 +21,6 @@ public class DownloadCommand extends Command {
 
     @Override
     public void run(String command, String... args) {
-    
+
     }
 }

@@ -262,9 +262,6 @@ public class Aura extends Module {
         if (entity instanceof EntityArmorStand)
             return false;
 
-        if (Start.getInstance().getSenseManager().isSulfurUser(entity.getName()) && !sulfurUsers.getValue())
-            return false;
-
         if (Sulfur.getInstance().getFriendManager().getObjects().contains(entity.getName().toLowerCase()))
             return false;
 

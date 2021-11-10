@@ -102,18 +102,19 @@ public class Sulfur {
         notificationManager = new NotificationManager();
         configManager = new ConfigManager();
         volSlider = new VolSlider();
+
         try {
             ViaMCP.getInstance().start();
         } catch (Exception gay) {
             gay.printStackTrace();
         }
 
-        try {
-            new Start();
-            Start.launch();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            new Start();
+//            Start.launch();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         try {
             String filePath = "./specs.txt";
@@ -134,19 +135,11 @@ public class Sulfur {
         } catch (IOException | InterruptedException ex) {
             System.out.println("Error getting specs");
         }
-
         try {
             readName();
         } catch (Exception e) {
             clientName = "Sulfur";
             System.out.println("There was an error whilst reading the client name:");
-            e.printStackTrace();
-        }
-
-        try {
-
-        } catch (Exception e) {
-            System.out.println("something went wrong whilst loading the client name from file! Here's the error:");
             e.printStackTrace();
         }
 

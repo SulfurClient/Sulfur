@@ -9,13 +9,13 @@ import net.minecraft.potion.Potion;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class Funkraft extends SpeedMode {
+public class Funcraft extends SpeedMode {
 
-    public Funkraft() {
+    public Funcraft() {
         super("Funcraft");
     }
 
-    public Funkraft(@NotNull String modeName) {
+    public Funcraft(@NotNull String modeName) {
         super(modeName);
     }
 
